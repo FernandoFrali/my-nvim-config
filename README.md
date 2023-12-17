@@ -1,6 +1,6 @@
 ## My Configs (fernandofrali - MacOSX)
 
-** OBS: this folder goes on your ~/.config folder
+**OBS: this folder goes on your ~/.config folder**
 
 - install nvim (brew install nvim)
 - install ripgrep (brew install nvim)
