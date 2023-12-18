@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('christoomey/vim-tmux-navigator')
+  use('nvim-tree/nvim-tree.lua')
+  use('nvim-tree/nvim-web-devicons')
 
   use {
   'VonHeikemen/lsp-zero.nvim',
