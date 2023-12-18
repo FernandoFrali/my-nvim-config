@@ -13,3 +13,21 @@
           ~/.config/nvim/pack/github/start/copilot.vim
       ```
     - start NVim and invoke :Copilot setup
+- install tmux (brew install tmux)
+- install tmux-tpm (git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm)
+- create a tmux.conf in ~/.config/tmux/tmux.conf with theses configs
+ ```
+      unbind r
+      bind r source-file ~/.config/tmux/tmux.conf
+      setw -g mode-keys vi
+      bind-key h select-pane -L
+      bind-key j select-pane -D
+      bind-key k select-pane -U
+      bind-key l select-pane -R
+      set -g @plugin 'tmux-plugins/tpm'
+      set -g @plugin 'christoomey/vim-tmux-navigator'
+      run '~/.tmux/plugins/tpm/tpm'
+
+ ```
+    - after that, use prefix (ctrl + b) + I (capital letter I)
+ - run a :PackerSync
