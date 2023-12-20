@@ -39,11 +39,13 @@ obs²: `CTRL + B` is the default PREFIX in tmux. Check if you haven't changed th
 
 
 ```
-git clone https://github.com/microsoft/vscode-js-debug ~/.local/share/nvim/site/pack/packer/opt/vscode-js-debug
-cd ~/.local/share/nvim/site/pack/packer/opt/vscode-js-debug
+git clone https://github.com/microsoft/vscode-js-debug ~/.local/share/nvim/site/vscode-js-debug
+cd ~/.local/share/nvim/site/vscode-js-debug
 sudo npm install --legacy-peer-deps
 npx gulp vsDebugServerBundle
 mv dist out
 ```
+
+obs: you need to change .config/nvim/after/plugin/nvim-dap.lua debugger_path to your user location (Users/fernandofrali to Users/your_user)
 
  - run ```:PackerSync```

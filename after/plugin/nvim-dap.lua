@@ -9,6 +9,7 @@ require('dap').adapters['pwa-node'] = {
 
 require('dap-vscode-js').setup({
     adapters = { 'pwa-node', 'node-terminal', 'chrome', 'pwa-chrome', 'pwa-msedge', 'pwa-extensionHost', 'node'},
+    debugger_path = "/Users/fernandofrali/.local/share/nvim/site/vscode-js-debug"
 })
 
 for _, language in ipairs { "typescript", "javascript", "typescriptreact" } do
