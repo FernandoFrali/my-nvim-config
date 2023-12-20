@@ -41,4 +41,4 @@ npx gulp vsDebugServerBundle
 mv dist out
 ```
 
- - run a ":PackerSync" command
+ - run ```:PackerSync```
