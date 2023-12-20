@@ -30,7 +30,7 @@
 
  ```
 after that, use prefix (ctrl + b) + I (capital letter I) to install tmux packages
-- install vscode-js-debug:
+- install vscode-js-debug (only if you use typescript/javascript):
 
 
 ```
