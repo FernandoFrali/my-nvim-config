@@ -29,7 +29,9 @@
       run '~/.tmux/plugins/tpm/tpm'
 
  ```
-after that, use prefix ```(CTRL + B) + I (capital i)``` to install tmux packages
+after that, use ```prefix (CTRL + B, if you didn't any change to keybinds) + I (capital i)``` to install tmux packages
+obs: you DON'T need to press all keys together. Just press CTRL + B and after press I.
+
 - install vscode-js-debug (only if you use typescript/javascript):
 
 
