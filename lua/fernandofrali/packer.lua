@@ -28,6 +28,10 @@ return require('packer').startup(function(use)
   use('christoomey/vim-tmux-navigator')
   use('nvim-tree/nvim-tree.lua')
   use('nvim-tree/nvim-web-devicons')
+  use('mfussenegger/nvim-dap')
+  use('rcarriga/nvim-dap-ui', { requires = 'mfussenegger/nvim-dap'})
+  -- JS Debugger
+  use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})
 
   use {
   'VonHeikemen/lsp-zero.nvim',

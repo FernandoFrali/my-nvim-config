@@ -30,4 +30,12 @@
 
  ```
     - after that, use prefix (ctrl + b) + I (capital letter I)
+- install vscode-js-debug:
+´´´
+git clone https://github.com/microsoft/vscode-js-debug ~/.local/share/nvim/site/pack/packer/opt/vscode-js-debug
+cd ~/.local/share/nvim/site/pack/packer/opt/vscode-js-debug
+sudo npm install --legacy-peer-deps
+npx gulp vsDebugServerBundle
+mv dist out
+´´´
  - run a :PackerSync
