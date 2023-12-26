@@ -4,6 +4,20 @@
 
 - install nvim ```brew install nvim```
 - install ripgrep ```brew install ripgrep```
+- install packer `git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+        ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
+- in your ~/.config folder, run these following commands:
+```
+nvim . // to start nvim. But you'll get some errors, just type G and then go Enter to ignore
+
+// Now you need to sync all plugins:
+
+:lua require('fernandofrali.packer')
+:so
+:PackerSync
+
+// now, just quit and reopen nvim
+```
 - set an alias to nvim (I like to use "vim"):
     - ```alias vim="nvim"``` (on .zshrc)
     - ```git config --global core.editor nvim```
