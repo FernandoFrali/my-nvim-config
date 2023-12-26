@@ -2,13 +2,17 @@
 
 **OBS: this folder goes on your ~/.config folder**
 
-- install nvim ```brew install nvim```
-- install ripgrep ```brew install ripgrep```
-- install packer `git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-        ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
+1. install nvim ```brew install nvim```
+2. install ripgrep ```brew install ripgrep```
+3. install packer:
+```shell
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 - in your ~/.config folder, run these following commands:
 ```
-nvim . // to start nvim. But you'll get some errors, just type G and then go Enter to ignore
+// to start nvim. But you'll get some errors, just type G (capital) and then go Enter to ignore:
+nvim . 
 
 // Now you need to sync all plugins:
 
@@ -18,18 +22,19 @@ nvim . // to start nvim. But you'll get some errors, just type G and then go Ent
 
 // now, just quit and reopen nvim
 ```
-- set an alias to nvim (I like to use "vim"):
+4. set an alias to nvim (I like to use "vim"):
     - ```alias vim="nvim"``` (on .zshrc)
     - ```git config --global core.editor nvim```
-- install github copilot
-      ``` 
-      git clone https://github.com/github/copilot.vim.git \
-  ~/.config/nvim/pack/github/start/copilot.vim
-      ```
-    - start NVim and invoke ```:Copilot setup```
-- install tmux ```brew install tmux```
-- install tmux-tpm ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
-- create a tmux.conf in ~/.config/tmux/tmux.conf with these configs
+5. install github copilot
+
+          git clone https://github.com/github/copilot.vim.git \
+            ~/.config/nvim/pack/github/start/copilot.vim
+
+
+    then start NVim and invoke ```:Copilot setup```
+6. install tmux ```brew install tmux```
+7. install tmux-tpm ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
+8. create a tmux.conf in ~/.config/tmux/tmux.conf with these configs
  ```
       unbind r
       bind r source-file ~/.config/tmux/tmux.conf
@@ -49,7 +54,7 @@ obs: you DON'T need to press all keys together. Just press `CTRL + B` and after 
 <br>
 obs²: `CTRL + B` is the default PREFIX in tmux. Check if you haven't changed that!
 
-- install vscode-js-debug (only if you use typescript/javascript):
+9. install vscode-js-debug (only if you use typescript/javascript):
 
 
 ```
