@@ -24,7 +24,7 @@ nvim . // to start nvim. But you'll get some errors, just type G and then go Ent
 - install github copilot
       ``` 
       git clone https://github.com/github/copilot.vim.git \
-          ~/.config/nvim/pack/github/start/copilot.vim
+  ~/.config/nvim/pack/github/start/copilot.vim
       ```
     - start NVim and invoke ```:Copilot setup```
 - install tmux ```brew install tmux```
