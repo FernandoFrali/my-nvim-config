@@ -3,7 +3,7 @@
 **OBS: this folder goes on your ~/.config folder**
 
 - install nvim ```brew install nvim```
-- install ripgrep ```brew install nvim```
+- install ripgrep ```brew install ripgrep```
 - set an alias to nvim (I like to use "vim"):
     - ```alias vim="nvim"``` (on .zshrc)
     - ```git config --global core.editor nvim```
