@@ -48,6 +48,8 @@ nvim .
       run '~/.tmux/plugins/tpm/tpm'
 
  ```
+now save and run `tmux`
+
 after that, press ```CTRL + B``` and ```I``` (capital i) to install tmux packages
 
 obs: you DON'T need to press all keys together. Just press `CTRL + B` and after press `I` (need to be capitalized!).
