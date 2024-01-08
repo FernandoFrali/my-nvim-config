@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
   use('rcarriga/nvim-dap-ui', { requires = 'mfussenegger/nvim-dap'})
   use('nvimtools/none-ls.nvim')
   use('mhartington/formatter.nvim')
+  use('preservim/nerdcommenter')
 
   -- JS Debugger
   use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})

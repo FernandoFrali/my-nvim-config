@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  nerdcommenter = {
+    loaded = true,
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nerdcommenter",
+    url = "https://github.com/preservim/nerdcommenter"
+  },
   ["none-ls.nvim"] = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
