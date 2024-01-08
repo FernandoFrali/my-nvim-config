@@ -1,15 +1,19 @@
-## My Configs (fernandofrali - MacOSX)
+# My Configs (fernandofrali - MacOSX)
 
-**OBS: this folder goes on your ~/.config folder**
+## Warnings:
+- this folder goes on your ~/.config folder**
 
-**OBS²: maybe your NPM have some bugs with permission when installing packages using Mason. To prevent this, use: `sudo chown -R 501:20 "/Users/YOUR_USERNAME_HERE/.npm"`**
-if that doesn't work for you, maybe the group or user id is wrong. Try to replace '501' with your user id and replace '20' with your user group.
+- maybe your NPM have some bugs with permission when installing packages using Mason. To prevent this, use: `sudo chown -R 501:20 "/Users/YOUR_USERNAME_HERE/.npm"`**
+
+OBS: if that doesn't work for you, maybe the group or user id is wrong. Try to replace '501' with your user id and '20' with your user group. Below have a tutorial to see that info:
 
 ```sh
-id -g -n YOUR_USERNAME #to see your user's group
-getent group YOUR_GROUP #to see your group's id
-id -u YOUR_USERNAME # to see your user's id
+id -g -n YOUR_USERNAME # to see your user's group
+getent group YOUR_GROUP # to see your group id
+id -u YOUR_USERNAME # to see your user id
 ```
+
+## How to install:
 
 1. install nvim ```brew install nvim```
 2. install ripgrep ```brew install ripgrep```
@@ -78,4 +82,4 @@ mv dist out
 
 obs: you need to change on  `~/.config/nvim/after/plugin/nvim-dap.lua` the `debugger_path` to your user location (e.g Users/fernandofrali to Users/your_user)
 
- - run ```:PackerSync```
+ - finally, run ```:PackerSync```
