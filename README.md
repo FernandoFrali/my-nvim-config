@@ -2,7 +2,7 @@
 
 **OBS: this folder goes on your ~/.config folder**
 
-**OBS²: maybe your NPM have some bugs with permission when installing packages using Mason. To prevent this, use: `sudo chown -R 501:20 "/Users/fernandofrali/.npm"`**
+**OBS²: maybe your NPM have some bugs with permission when installing packages using Mason. To prevent this, use: `sudo chown -R 501:20 "/Users/YOUR_USERNAME_HERE/.npm"`**
 
 1. install nvim ```brew install nvim```
 2. install ripgrep ```brew install ripgrep```
