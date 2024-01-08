@@ -1,5 +1,9 @@
 # My Configs (fernandofrali - MacOSX)
 
+This is my nvim configs that I usually update with new plugins and keybinds. Be free to use if you like!
+
+_I only have tested on MacOS, so I can't guarantee that this works on Linux/Windows too._
+
 ## Warnings:
 - this folder goes on your ~/.config folder**
 
