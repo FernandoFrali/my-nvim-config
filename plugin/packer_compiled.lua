@@ -134,10 +134,10 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["mini.comment"] = {
+  nerdcommenter = {
     loaded = true,
-    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/mini.comment",
-    url = "https://github.com/echasnovski/mini.comment"
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nerdcommenter",
+    url = "https://github.com/preservim/nerdcommenter"
   },
   ["none-ls-extras.nvim"] = {
     loaded = true,
