@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
   use('NvChad/nvim-colorizer.lua')
   use('folke/todo-comments.nvim', { requires = 'nvim-lua/plenary.nvim'})
   use('supermaven-inc/supermaven-nvim')
+  use('akinsho/toggleterm.nvim')
 
   -- JS Debugger
   use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})

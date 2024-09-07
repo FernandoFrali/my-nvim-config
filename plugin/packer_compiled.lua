@@ -235,6 +235,11 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/undotree",
