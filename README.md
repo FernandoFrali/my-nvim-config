@@ -19,7 +19,7 @@ id -u YOUR_USERNAME # to see your user id
 
 ## How to install:
 
-1. install nvim ```brew install nvim```
+1. install nvim ```brew install nvim``` (obs: remember to ALWAYS update your nvim to the latest version, like: brew update && brew upgrade nvim)
 2. install ripgrep ```brew install ripgrep```
 3. install packer:
 ```shell
