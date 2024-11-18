@@ -3,7 +3,7 @@ local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 none_ls.setup({
     sources = {
-        require("none-ls.diagnostics.eslint_d"),
+        -- require("none-ls.diagnostics.eslint_d"),
         none_ls.builtins.formatting.biome,
         none_ls.builtins.completion.spell,
     },
