@@ -1,7 +1,7 @@
 -- Nerd Commenter
 vim.g.NERDCreateDefaultMappings = 0
 
-vim.keymap.set("n", "<leader>cc", "<Plug>NERDCommenterToggle")
+vim.keymap.set("n", "<leader>c<leader>", "<Plug>NERDCommenterToggle")
 --
 
 vim.g.mapleader = " "
