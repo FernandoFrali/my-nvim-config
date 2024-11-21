@@ -34,10 +34,12 @@ return require('packer').startup(function(use)
   use('nvimtools/none-ls.nvim', { requires = 'nvimtools/none-ls-extras.nvim'})
   use('nvimtools/none-ls-extras.nvim')
   use('mhartington/formatter.nvim')
-  use('preservim/nerdcommenter')
   use('NvChad/nvim-colorizer.lua')
   use('folke/todo-comments.nvim', { requires = 'nvim-lua/plenary.nvim'})
   use('akinsho/toggleterm.nvim')
+  use('numToStr/Comment.nvim')
+  use("pmizio/typescript-tools.nvim", { requires = "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"})
+  use("folke/tokyonight.nvim")
 
   -- JS Debugger
   use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})
