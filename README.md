@@ -42,7 +42,7 @@ nvim .
 4. set an alias to nvim (I like to use "vim"):
     - ```alias vim="nvim"``` (on .zshrc)
     - ```git config --global core.editor nvim```
-5. install github copilot
+5. install github copilot (deprecated, use supermaven):
 
           git clone https://github.com/github/copilot.vim.git \
             ~/.config/nvim/pack/github/start/copilot.vim

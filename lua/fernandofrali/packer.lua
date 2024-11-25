@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
   use('numToStr/Comment.nvim')
   use("pmizio/typescript-tools.nvim", { requires = "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"})
   use("folke/tokyonight.nvim")
+  use("supermaven-inc/supermaven-nvim")
 
   -- JS Debugger
   use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})
