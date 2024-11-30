@@ -84,6 +84,12 @@ npx gulp vsDebugServerBundle
 mv dist out
 ```
 
-obs: you need to change on  `~/.config/nvim/after/plugin/nvim-dap.lua` the `debugger_path` to your user location (e.g Users/fernandofrali to Users/your_user)
+obs: you need to change on  `~/.config/nvim/after/plugin/nvim-dap.lua` the `debugger_path` to your user location (e.g Users/fernandofrali to Users/your_user).
+Try to search for all "fernandofrali" and replace it with your user name.
 
- - finally, run ```:PackerSync```
+- finally, run ```:PackerSync``` (and :Mason if you haven't already)
+
+## Additional info:
+
+Doc for config the debugger to Rust:
+https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb)

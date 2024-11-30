@@ -16,8 +16,14 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 require('mason').setup({})
+require("mason-nvim-dap").setup({
+  ensure_installed = {
+    "codelldb",
+    "cpptools",
+  },
+})
 require('mason-lspconfig').setup({
-  ensure_installed = {'ts_ls', 'rust_analyzer', 'pyright', 'bashls', 'vimls', 'jsonls', 'yamlls', 'html', 'cssls', 'dockerls', 'terraformls', 'tailwindcss', 'efm', 'clangd', 'angularls', 'prismals', 'astro', 'gopls', "clangd"},
+  ensure_installed = {'ts_ls', 'rust_analyzer', 'pyright', 'bashls', 'vimls', 'jsonls', 'yamlls', 'html', 'cssls', 'dockerls', 'terraformls', 'tailwindcss', 'efm', 'clangd', 'angularls', 'prismals', 'astro', 'gopls'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()

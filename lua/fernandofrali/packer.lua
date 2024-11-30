@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
   use("pmizio/typescript-tools.nvim", { requires = "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"})
   use("folke/tokyonight.nvim")
   use("supermaven-inc/supermaven-nvim")
+  use("jay-babu/mason-nvim-dap.nvim")
 
   -- JS Debugger
   use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})

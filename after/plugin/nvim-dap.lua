@@ -1,4 +1,6 @@
-require('dap').adapters['pwa-node'] = {
+local dap = require('dap')
+
+dap.adapters['pwa-node'] = {
     type = "server",
     host = "127.0.0.1",
     port = 8123,
@@ -7,13 +9,38 @@ require('dap').adapters['pwa-node'] = {
     }
 }
 
+dap.adapters.codelldb = {
+    type = 'server',
+    port = "${port}",
+    executable = {
+        command = "/Users/fernandofrali/.local/share/nvim/mason/bin/codelldb",
+        args = {"--port", "${port}"}
+    },
+}
+
+dap.configurations.cpp = {
+  {
+    name = "Launch file",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+  },
+}
+
+dap.configurations.c = dap.configurations.cpp
+dap.configurations.rust = dap.configurations.cpp
+
 require('dap-vscode-js').setup({
     adapters = { 'pwa-node', 'node-terminal', 'chrome', 'pwa-chrome', 'pwa-msedge', 'pwa-extensionHost', 'node'},
     debugger_path = "/Users/fernandofrali/.local/share/nvim/site/vscode-js-debug"
 })
 
 for _, language in ipairs { "typescript", "javascript", "typescriptreact" } do
-    require("dap").configurations[language] = {
+    dap.configurations[language] = {
         {
             type = "pwa-node",
             request = "launch",
@@ -37,6 +64,6 @@ for _, language in ipairs { "typescript", "javascript", "typescriptreact" } do
             cwd = "${workspaceFolder}",
             watch = true,
             runtimeExecutable = "bun",
-        }
+        },
     }
 end
