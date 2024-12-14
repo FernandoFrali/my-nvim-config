@@ -6,7 +6,23 @@ require("nvim-tree").setup({
         enable = true,
         show_on_dirs = true,
     },
+    actions = {
+        open_file = {
+            quit_on_open = true,
+        },
+    },
+    log = {
+        enable = true,
+        truncate = true,
+        types = {
+            diagnostics = true,
+            git = true,
+            profile = true,
+            watcher = true,
+        },
+    },
     renderer = {
+        group_empty = true,
         indent_markers = {
             enable = true,
         },

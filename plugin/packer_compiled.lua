@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -144,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["noice.nvim"] = {
+    loaded = true,
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
   ["none-ls-extras.nvim"] = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/none-ls-extras.nvim",
@@ -153,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
     url = "https://github.com/nvimtools/none-ls.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -189,6 +204,11 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-nio",
     url = "https://github.com/nvim-neotest/nvim-nio"
   },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -219,6 +239,11 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   ["supermaven-nvim"] = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
@@ -238,11 +263,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["typescript-tools.nvim"] = {
     loaded = true,
