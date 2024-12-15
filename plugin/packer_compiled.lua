@@ -204,11 +204,6 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-nio",
     url = "https://github.com/nvim-neotest/nvim-nio"
   },
-  ["nvim-notify"] = {
-    loaded = true,
-    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-notify",
-    url = "https://github.com/rcarriga/nvim-notify"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

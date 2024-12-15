@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
   use("nvim-lualine/lualine.nvim")
   use("MunifTanjim/nui.nvim")
   use("folke/noice.nvim")
-  use("rcarriga/nvim-notify")
+  -- use("rcarriga/nvim-notify")
   use("nvim-telescope/telescope.nvim")
 
   -- JS Debugger
