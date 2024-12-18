@@ -28,7 +28,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```
 - in your ~/.config folder, run these following commands:
 ```
-// to start nvim. But you'll get some errors, just type G (capital) and then go Enter to ignore:
+// use command below to start nvim. But you'll get some errors, just type G (capital) and then go Enter to ignore:
+
 nvim . 
 
 // Now you need to sync all plugins:
