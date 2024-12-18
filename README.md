@@ -88,7 +88,7 @@ mv dist out
 obs: you need to change on  `~/.config/nvim/after/plugin/nvim-dap.lua` the `debugger_path` to your user location (e.g Users/fernandofrali to Users/your_user).
 Try to search for all "fernandofrali" and replace it with your user name.
 
-- finally, run ```:PackerSync``` (and :Mason if you haven't already)
+- finally, run ```:PackerSync``` (and `:Mason` if you haven't already)
 
 ## Additional info:
 
