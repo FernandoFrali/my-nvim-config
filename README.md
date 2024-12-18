@@ -32,9 +32,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 nvim . 
 
-// Now you need to sync all plugins:
+// Now you need to sync all plugins (change "fernandofrali" with your user name):
 
-:lua require('fernandofrali.packer')
+:lua require('fernandofrali.packer') 
 :so
 :PackerSync
 
