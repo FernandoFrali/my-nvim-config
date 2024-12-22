@@ -52,7 +52,7 @@ nvim .
     then start NVim and invoke ```:Copilot setup```
 6. install tmux ```brew install tmux```
 7. install tmux-tpm ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
-8. create a tmux.conf in ~/.config/tmux/tmux.conf with these configs
+8. create a file named `.tmux.conf` (pay attention on dot before file name, its important!) in `~/` path (`touch ~/.tmux.conf`) with these configs:
  ```
       unbind r
       bind r source-file ~/.config/tmux/tmux.conf
@@ -64,11 +64,10 @@ nvim .
       set -g @plugin 'tmux-plugins/tpm'
       set -g @plugin 'christoomey/vim-tmux-navigator'
       run '~/.tmux/plugins/tpm/tpm'
-
  ```
 now save and run `tmux`
 
-after that, press ```CTRL + B``` and ```I``` (capital i) to install tmux packages
+after that, press ```CTRL + B``` and ```I``` (capital i) to install tmux packages with tpm
 
 obs: you DON'T need to press all keys together. Just press `CTRL + B` and after press `I` (need to be capitalized!).
 <br>
