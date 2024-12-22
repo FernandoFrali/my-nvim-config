@@ -55,7 +55,7 @@ nvim .
 8. create a file named `.tmux.conf` (pay attention on dot before file name, its important!) in `~/` path (`touch ~/.tmux.conf`) with these configs:
  ```
 unbind r
-bind r source-file ~/.config/tmux/tmux.conf
+bind r source-file ~/.tmux.conf
 setw -g mode-keys vi
 bind-key h select-pane -L
 bind-key j select-pane -D
@@ -64,6 +64,7 @@ bind-key l select-pane -R
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'niksingh710/minimal-tmux-status'
 run '~/.tmux/plugins/tpm/tpm'
  ```
 now save and run `tmux`
