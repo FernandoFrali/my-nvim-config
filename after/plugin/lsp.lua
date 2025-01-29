@@ -15,6 +15,7 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+require("lsp-file-operations").setup()
 require('mason').setup({})
 require("mason-nvim-dap").setup({
   ensure_installed = {

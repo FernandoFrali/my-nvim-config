@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-dap-vscode-js",
     url = "https://github.com/mxsdev/nvim-dap-vscode-js"
   },
+  ["nvim-lsp-file-operations"] = {
+    loaded = true,
+    path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-lsp-file-operations",
+    url = "https://github.com/antosha417/nvim-lsp-file-operations"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/fernandofrali/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",

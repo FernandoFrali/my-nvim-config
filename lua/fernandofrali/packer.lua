@@ -15,8 +15,7 @@ return require('packer').startup(function(use)
 -- })
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.5',
-	  -- or                            , branch = '0.1.x',
+	  'nvim-telescope/telescope.nvim', 
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -48,7 +47,7 @@ return require('packer').startup(function(use)
   use("MunifTanjim/nui.nvim")
   use("folke/noice.nvim")
   -- use("rcarriga/nvim-notify")
-  use("nvim-telescope/telescope.nvim")
+  use("antosha417/nvim-lsp-file-operations")
 
   -- JS Debugger
   use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})
