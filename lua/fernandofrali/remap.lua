@@ -48,4 +48,4 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-vim.keymap.set("v", "y", "myY`y", { noremap = true, silent = true })
+vim.keymap.set({"n", "v"}, "y", "myy`y", { noremap = true, silent = true })
