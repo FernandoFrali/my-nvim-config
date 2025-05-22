@@ -1,4 +1,26 @@
 local dap = require('dap')
+local dapui = require('dapui')
+
+dap.adapters.go = {
+    type = "server",
+    port = "40000",
+    executable = {
+        command = "dlv",
+        args = { "dap", "-l", "127.0.0.1:40000" },
+    }
+}
+
+dap.configurations.go = {
+  {
+    type = "go",
+    name = "Debug Server",
+    request = "attach",
+    mode = "remote",
+    port = 40000,
+    host = "127.0.0.1",
+    program = "${workspaceFolder}/tmp/main",
+  },
+}
 
 dap.adapters['pwa-node'] = {
     type = "server",

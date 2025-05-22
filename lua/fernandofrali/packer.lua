@@ -4,7 +4,6 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
 --   use({ 'rose-pine/neovim',
@@ -20,7 +19,6 @@ return require('packer').startup(function(use)
   }
 
   -- Theme
-  -- use("sainnhe/sonokai")
   use("nyoom-engineering/oxocarbon.nvim")
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -31,8 +29,6 @@ return require('packer').startup(function(use)
   use('christoomey/vim-tmux-navigator')
   use('nvim-tree/nvim-tree.lua')
   use('nvim-tree/nvim-web-devicons')
-  use('mfussenegger/nvim-dap')
-  use('rcarriga/nvim-dap-ui', { requires = 'mfussenegger/nvim-dap'})
   use('nvim-neotest/nvim-nio')
   use('nvimtools/none-ls.nvim', { requires = 'nvimtools/none-ls-extras.nvim'})
   use('nvimtools/none-ls-extras.nvim')
@@ -41,15 +37,17 @@ return require('packer').startup(function(use)
   use('folke/todo-comments.nvim', { requires = 'nvim-lua/plenary.nvim'})
   use('numToStr/Comment.nvim')
   use("supermaven-inc/supermaven-nvim")
-  use("jay-babu/mason-nvim-dap.nvim")
   use("nvim-lualine/lualine.nvim")
   use("MunifTanjim/nui.nvim")
   use("folke/noice.nvim")
-  -- use("rcarriga/nvim-notify")
   use("antosha417/nvim-lsp-file-operations")
 
-  -- JS Debugger
+  -- Debuggers
+  use('mfussenegger/nvim-dap')
+  use('rcarriga/nvim-dap-ui', { requires = 'mfussenegger/nvim-dap'})
+  use("jay-babu/mason-nvim-dap.nvim")
   use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})
+  use('leoluz/nvim-dap-go')
 
   use {
   'VonHeikemen/lsp-zero.nvim',
