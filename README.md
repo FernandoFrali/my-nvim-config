@@ -5,7 +5,7 @@ This is my nvim configs that I usually update with new plugins and keybinds. Be 
 _I only have tested on MacOS, so I can't guarantee that this works on Linux/Windows too._
 
 ## Warnings:
-- this folder goes on your ~/.config folder**
+- this folder goes on your ~/.config folder (or `%LOCALAPPDATA%\nvim` on Windows) **
 
 - maybe your NPM have some bugs with permission when installing packages using Mason. To prevent this, use: `sudo chown -R 501:20 "/Users/YOUR_USERNAME_HERE/.npm"`**
 
@@ -20,13 +20,19 @@ id -u YOUR_USERNAME # to see your user id
 ## How to install:
 
 1. install nvim ```brew install nvim``` (obs: remember to ALWAYS update your nvim to the latest version, like: brew update && brew upgrade nvim)
-2. install ripgrep ```brew install ripgrep```
+2. install ripgrep ```brew install ripgrep``` (for windows, you can use scoop: https://scoop.sh/ or winget: https://github.com/microsoft/winget-cli). Windows Winget example: `winget install BurntSushi.ripgrep.MSVC`, and linux (ubuntu/debian) example: `sudo apt-get install ripgrep`
 3. install packer:
+macOS and Linux:
 ```shell
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
-- in your ~/.config folder, run these following commands:
+Windows:
+```shell
+git clone --depth 1 https://github.com/wbthomason/packer.nvim "$HOME/AppData/Local/nvim-data/site/pack/packer/start/packer.nvim"
+```
+
+- Packer installed, now you need to sync all plugins, so in your CONFIG folder (e.g `~/.config/nvim`) run these following commands:
 ```
 // use command below to start nvim. But you'll get some errors, just type G (capital) and then go Enter to ignore:
 
