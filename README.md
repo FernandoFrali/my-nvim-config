@@ -1,8 +1,8 @@
-# My Configs (fernandofrali - MacOSX)
+# My Configs (fernandofrali - MacOSX, Manjaro, W11)
 
 This is my nvim configs that I usually update with new plugins and keybinds. Be free to use if you like!
 
-_I only have tested on MacOS, so I can't guarantee that this works on Linux/Windows too._
+_I use this on MacOS, so I can't guarantee that this works 100% on Linux/Windows too, but I've installed nvim with these configs on Windows 11 and Linux Manjaro._
 
 ## Warnings:
 - this folder goes on your ~/.config folder (or `%LOCALAPPDATA%\nvim` on Windows) **
@@ -18,7 +18,6 @@ id -u YOUR_USERNAME # to see your user id
 ```
 
 ## How to install:
-<hr/>
 
 <strong>1. install nvim ```brew install nvim``` (obs: remember to ALWAYS update your nvim to the latest version, like: brew update && brew upgrade nvim)</strong>
 <hr/>
