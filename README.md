@@ -18,16 +18,40 @@ id -u YOUR_USERNAME # to see your user id
 ```
 
 ## How to install:
+<hr/>
 
-1. install nvim ```brew install nvim``` (obs: remember to ALWAYS update your nvim to the latest version, like: brew update && brew upgrade nvim)
-2. install ripgrep ```brew install ripgrep``` (for windows, you can use scoop: https://scoop.sh/ or winget: https://github.com/microsoft/winget-cli). Windows Winget example: `winget install BurntSushi.ripgrep.MSVC`, and linux (ubuntu/debian) example: `sudo apt-get install ripgrep`
-3. install packer:
-macOS and Linux:
+<strong>1. install nvim ```brew install nvim``` (obs: remember to ALWAYS update your nvim to the latest version, like: brew update && brew upgrade nvim)</strong>
+<hr/>
+
+<details>
+<summary><strong>2. Install ripgrep</strong></summary>
+
+<hr/>
+
+#### MacOS:
+`brew install ripgrep`
+<hr/>
+
+_For windows, you can use scoop: https://scoop.sh/ or winget: https://github.com/microsoft/winget-cli)._
+#### Windows with Winget:
+`winget install BurntSushi.ripgrep.MSVC`
+<hr/>
+
+#### Linux (ubuntu/debian):
+`sudo apt-get install ripgrep`
+<hr/>
+</details>
+<hr/>
+
+<details>
+<summary><strong>3. Install Packer</strong></summary>
+
+#### macOS and Linux:
 ```shell
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
-Windows:
+#### Windows:
 ```shell
 git clone --depth 1 https://github.com/wbthomason/packer.nvim "$HOME/AppData/Local/nvim-data/site/pack/packer/start/packer.nvim"
 ```
@@ -46,19 +70,28 @@ nvim .
 
 // now, just quit and reopen nvim
 ```
-4. set an alias to nvim (I like to use "vim"):
+</details>
+<hr/>
+
+<strong>4. set an alias to nvim (I like to use "vim"):</strong>
     - ```alias vim="nvim"``` (on .zshrc)
     - ```git config --global core.editor nvim```
-5. ~install github copilot~ (deprecated, use supermaven, is better)
+<hr/>
+
+<strong>~5. install github copilot~ (deprecated, use supermaven, is better)</strong>
 
           git clone https://github.com/github/copilot.vim.git \
             ~/.config/nvim/pack/github/start/copilot.vim
 
 
     then start NVim and invoke ```:Copilot setup```
+<hr/>
+
+### TMUX SECTION (steps 6, 8 and 9):
+ 
 6. install tmux ```brew install tmux```
-7. install tmux-tpm ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
-8. create a file named `.tmux.conf` (pay attention on dot before file name, its important!) in `~/` path (`touch ~/.tmux.conf`) with these configs:
+8. install tmux-tpm ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
+9. create a file named `.tmux.conf` (pay attention on dot before file name, its important!) in `~/` path (`touch ~/.tmux.conf`) with these configs:
  ```
 unbind r
 bind r source-file ~/.tmux.conf
@@ -80,8 +113,11 @@ after that, press ```CTRL + B``` and ```I``` (capital i) to install tmux package
 obs: you DON'T need to press all keys together. Just press `CTRL + B` and after press `I` (need to be capitalized!).
 <br>
 obs²: `CTRL + B` is the default PREFIX in tmux. Check if you haven't changed that!
+<hr/>
 
-9. install vscode-js-debug (only if you use typescript/javascript):
+<details>
+<summary><strong>9. TypeScript/JavaScript debugger:</strong></summary>
+install vscode-js-debug (only if you use typescript/javascript):
 
 
 ```
@@ -94,8 +130,10 @@ mv dist out
 
 obs: you need to change on  `~/.config/nvim/after/plugin/nvim-dap.lua` the `debugger_path` to your user location (e.g Users/fernandofrali to Users/your_user).
 Try to search for all "fernandofrali" and replace it with your user name.
+</details>
+<hr/>
 
-- finally, run ```:PackerSync``` (and `:Mason` if you haven't already)
+<strong>10. finally, run ```:PackerSync``` (and `:Mason` if you haven't already)</strong>
 
 ## Additional info:
 
