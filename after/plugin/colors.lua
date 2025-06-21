@@ -1,5 +1,6 @@
 function WorldIsNotGreyAnymore(color)
-    color = color or "oxocarbon"
+    vim.opt.background = "dark"
+    color = color or require("noirbuddy").setup()
     -- require("rose-pine").setup({
     --     disable_italics = true,
     --     disable_background = true,

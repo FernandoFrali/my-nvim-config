@@ -6,12 +6,12 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
---   use({ 'rose-pine/neovim',
---   	as = 'rose-pine',
+  use({ 'rose-pine/neovim',
+  	as = 'rose-pine',
 -- 	config = function()
 -- 		vim.cmd('colorscheme rose-pine')
 -- 	end
--- })
+})
 
   use {
 	  'nvim-telescope/telescope.nvim', 
@@ -41,6 +41,12 @@ return require('packer').startup(function(use)
   use("MunifTanjim/nui.nvim")
   use("folke/noice.nvim")
   use("antosha417/nvim-lsp-file-operations")
+  use("andreasvc/vim-256noir")
+  use {
+  "jesseleite/nvim-noirbuddy",
+  requires = { "tjdevries/colorbuddy.nvim" }
+  }
+  use ("OmniSharp/omnisharp-vim")
 
   -- Debuggers
   use('mfussenegger/nvim-dap')
