@@ -77,3 +77,15 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set({"n", "v"}, "y", "myy`y", { noremap = true, silent = true })
+
+local function send_to_tmux(cmd)
+  os.execute("tmux split-window -h '" .. cmd .. "'")
+end
+
+vim.keymap.set("n", "<leader>dnb", function()
+  send_to_tmux("dotnet build; read")
+end, { desc = "Dotnet Build (tmux)" })
+
+vim.keymap.set("n", "<leader>dnr", function()
+  send_to_tmux("dotnet run; read")
+end, { desc = "Dotnet Run (tmux)" })
