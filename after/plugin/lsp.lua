@@ -1,7 +1,7 @@
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
+  local opts = { buffer = bufnr, remap = false }
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -24,7 +24,7 @@ require("mason-nvim-dap").setup({
   },
 })
 require('mason-lspconfig').setup({
-  ensure_installed = {'ts_ls', 'rust_analyzer', 'pyright', 'bashls', 'vimls', 'jsonls', 'yamlls', 'html', 'cssls', 'dockerls', 'terraformls', 'tailwindcss', 'efm', 'clangd', 'angularls', 'prismals', 'astro', 'gopls','biome'},
+  ensure_installed = { 'ts_ls', 'rust_analyzer', 'pyright', 'bashls', 'vimls', 'jsonls', 'yamlls', 'html', 'cssls', 'dockerls', 'terraformls', 'tailwindcss', 'efm', 'clangd', 'angularls', 'prismals', 'astro', 'gopls', 'biome', 'lua_ls' },
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
@@ -35,13 +35,13 @@ require('mason-lspconfig').setup({
 })
 
 local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 cmp.setup({
   sources = {
-    {name = 'path'},
-    {name = 'nvim_lsp'},
-    {name = 'nvim_lua'},
+    { name = 'path' },
+    { name = 'nvim_lsp' },
+    { name = 'nvim_lua' },
   },
   formatting = lsp_zero.cmp_format(),
   mapping = cmp.mapping.preset.insert({
