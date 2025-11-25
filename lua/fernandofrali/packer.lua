@@ -42,11 +42,14 @@ return require('packer').startup(function(use)
   use("folke/noice.nvim")
   use("antosha417/nvim-lsp-file-operations")
   use("andreasvc/vim-256noir")
+  use("jackplus-xyz/binary.nvim")
   use {
   "jesseleite/nvim-noirbuddy",
   requires = { "tjdevries/colorbuddy.nvim" }
   }
-  use ("OmniSharp/omnisharp-vim")
+  use("OmniSharp/omnisharp-vim")
+  use("rktjmp/lush.nvim")
+  use("zenbones-theme/zenbones.nvim")
 
   -- Debuggers
   use('mfussenegger/nvim-dap')

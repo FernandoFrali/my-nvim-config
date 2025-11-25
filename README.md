@@ -91,20 +91,32 @@ nvim .
 6. install tmux ```brew install tmux```
 8. install tmux-tpm ```git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm```
 9. create a file named `.tmux.conf` (pay attention on dot before file name, its important!) in `~/` path (`touch ~/.tmux.conf`) with these configs:
+
  ```
 unbind r
 bind r source-file ~/.tmux.conf
+
+set -g prefix C-\\
+unbind C-b
 setw -g mode-keys vi
-bind-key h select-pane -L
-bind-key j select-pane -D
-bind-key k select-pane -U
-bind-key l select-pane -R
+
+set -g @rose_pine_variant 'main'
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'tmux-plugins/tmux-yank'
-set -g @plugin 'niksingh710/minimal-tmux-status'
+
+set -g window-status-style fg=#7d7d7d,bg=default
+set -g window-status-format " #[fg=#7d7d7d,]#I:#W "
+
+set -g window-status-current-style fg=white,bg=default
+set -g window-status-current-format " #[fg=white,bold]#I:#W "
+set -g status-style bg=default,fg=white
+
+bind-key -r f run-shell "tmux neww tmux-sessionizer"
+
 run '~/.tmux/plugins/tpm/tpm'
  ```
+
 now save and run `tmux`
 
 after that, press ```CTRL + B``` and ```I``` (capital i) to install tmux packages with tpm
