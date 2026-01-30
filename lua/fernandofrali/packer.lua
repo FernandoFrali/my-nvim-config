@@ -6,22 +6,23 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  use({ 'rose-pine/neovim',
-  	as = 'rose-pine',
--- 	config = function()
--- 		vim.cmd('colorscheme rose-pine')
--- 	end
-})
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    -- 	config = function()
+    -- 		vim.cmd('colorscheme rose-pine')
+    -- 	end
+  })
 
   use {
-	  'nvim-telescope/telescope.nvim', 
-	  requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim',
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   -- Theme
   use("nyoom-engineering/oxocarbon.nvim")
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
@@ -30,11 +31,11 @@ return require('packer').startup(function(use)
   use('nvim-tree/nvim-tree.lua')
   use('nvim-tree/nvim-web-devicons')
   use('nvim-neotest/nvim-nio')
-  use('nvimtools/none-ls.nvim', { requires = 'nvimtools/none-ls-extras.nvim'})
+  use('nvimtools/none-ls.nvim', { requires = 'nvimtools/none-ls-extras.nvim' })
   use('nvimtools/none-ls-extras.nvim')
   use('mhartington/formatter.nvim')
   use('NvChad/nvim-colorizer.lua')
-  use('folke/todo-comments.nvim', { requires = 'nvim-lua/plenary.nvim'})
+  use('folke/todo-comments.nvim', { requires = 'nvim-lua/plenary.nvim' })
   use('numToStr/Comment.nvim')
   use("supermaven-inc/supermaven-nvim")
   use("nvim-lualine/lualine.nvim")
@@ -44,8 +45,8 @@ return require('packer').startup(function(use)
   use("andreasvc/vim-256noir")
   use("jackplus-xyz/binary.nvim")
   use {
-  "jesseleite/nvim-noirbuddy",
-  requires = { "tjdevries/colorbuddy.nvim" }
+    "jesseleite/nvim-noirbuddy",
+    requires = { "tjdevries/colorbuddy.nvim" }
   }
   use("OmniSharp/omnisharp-vim")
   use("rktjmp/lush.nvim")
@@ -53,31 +54,35 @@ return require('packer').startup(function(use)
 
   -- Debuggers
   use('mfussenegger/nvim-dap')
-  use('rcarriga/nvim-dap-ui', { requires = 'mfussenegger/nvim-dap'})
+  use('rcarriga/nvim-dap-ui', { requires = 'mfussenegger/nvim-dap' })
   use("jay-babu/mason-nvim-dap.nvim")
-  use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap'})
+  use('mxsdev/nvim-dap-vscode-js', { requires = 'mfussenegger/nvim-dap' })
   use('leoluz/nvim-dap-go')
+  use('nvim-java/nvim-java')
+  use {
+    'JavaHello/spring-boot.nvim',
+    commit = '218c0c26c14d99feca778e4d13f5ec3e8b1b60f0',
+  }
+  use ('MunifTanjim/nui.nvim')
 
   use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v3.x',
-  requires = {
-    --- Uncomment these if you want to manage LSP servers from neovim
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},
-    {'williamboman/mason.nvim'},
-    {'williamboman/mason-lspconfig.nvim'},
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x',
+    requires = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-buffer'},
-    {'hrsh7th/cmp-path'},
-    {'hrsh7th/cmp-nvim-lua'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'L3MON4D3/LuaSnip'},
-    {'saadparwaiz1/cmp_luasnip'},
-    {'rafamadriz/friendly-snippets'},
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'hrsh7th/cmp-nvim-lua' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'L3MON4D3/LuaSnip' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'rafamadriz/friendly-snippets' },
+    }
   }
-}
-
 end)

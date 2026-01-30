@@ -29,7 +29,7 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
     lua_ls = function()
       local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
+      vim.lsp.config.lua_ls.setup(lua_opts)
     end,
   }
 })
@@ -52,9 +52,11 @@ cmp.setup({
   }),
 })
 
-require("lspconfig").omnisharp.setup({
-  cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
-  enable_roslyn_analyzers = true,
-  organize_imports_on_format = true,
-  enable_import_completion = true,
-})
+vim.lsp.enable('jdtls')
+
+-- vim.lsp.config.omnisharp.setup({
+--   cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+--   enable_roslyn_analyzers = true,
+--   organize_imports_on_format = true,
+--   enable_import_completion = true,
+-- })
