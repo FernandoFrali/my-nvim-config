@@ -1,3 +1,5 @@
+vim.api.nvim_create_user_command("KeybindsGuide", require("fernandofrali.help").show_keybinds, {})
+
 vim.g.mapleader = " "
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -5,34 +7,34 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Debugger
 vim.keymap.set("n", "<leader>db", function()
-    require("dap").toggle_breakpoint()
+  require("dap").toggle_breakpoint()
 end)
 vim.keymap.set("n", "<F10>", function()
-    require("dap").continue()
+  require("dap").continue()
 end)
 vim.keymap.set("n", "<F2>", function()
-    require("dap").step_into()
+  require("dap").step_into()
 end)
 vim.keymap.set("n", "<F3>", function()
-    require("dap").step_over()
+  require("dap").step_over()
 end)
 vim.keymap.set("n", "<F4>", function()
-    require("dap").step_out()
+  require("dap").step_out()
 end)
 vim.keymap.set("n", "<leader>q", function()
-    require("dap").terminate()
+  require("dap").terminate()
 end)
 vim.keymap.set("n", "<leader>dgt", function()
-    require("dap-go").debug_test()
+  require("dap-go").debug_test()
 end)
 vim.keymap.set("n", "<leader>dgl", function()
-    require("dap-go").debug_last()
+  require("dap-go").debug_last()
 end)
 vim.keymap.set("n", "<F5>", function()
-    require('dapui').elements.watches.add(vim.fn.expand('<cword>'))
+  require('dapui').elements.watches.add(vim.fn.expand('<cword>'))
 end)
 vim.keymap.set("n", "<leader>?", function()
-    require("dapui").eval(nil, { enter = true })
+  require("dapui").eval(nil, { enter = true })
 end)
 
 vim.keymap.set("n", "J", "mzJ`z")
@@ -42,18 +44,18 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
+  require("vim-with-me").StartVimWithMe()
 end)
 vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
+  require("vim-with-me").StopVimWithMe()
 end)
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
@@ -73,10 +75,10 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/fernandofrali/pack
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+  vim.cmd("so")
 end)
 
-vim.keymap.set({"n", "v"}, "y", "myy`y", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "y", "myy`y", { noremap = true, silent = true })
 
 local function send_to_tmux(cmd)
   os.execute("tmux split-window -h '" .. cmd .. "'")

@@ -19,6 +19,16 @@ id -u YOUR_USERNAME # to see your user id
 
 ## How to install:
 
+Note: The formatters (clang-format, rustfmt) need to be installed on your system:
+- macOS: brew install clang-format
+- Rust: rustup component add rustfmt
+
+Go formatters:
+-- run: go install mvdan.cc/gofumpt@latest
+-- run: go install github.com/incu6us/goimports-reviser/v3@latest
+-- run: go install github.com/segmentio/golines@latest
+
+
 <strong>1. install nvim ```brew install nvim``` (obs: remember to ALWAYS update your nvim to the latest version, like: brew update && brew upgrade nvim)</strong>
 <hr/>
 

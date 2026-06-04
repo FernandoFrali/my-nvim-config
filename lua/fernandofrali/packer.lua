@@ -22,8 +22,7 @@ return require('packer').startup(function(use)
   -- Theme
   use("nyoom-engineering/oxocarbon.nvim")
 
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-  use('nvim-treesitter/playground')
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate', branch = 'main' })
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -39,7 +38,6 @@ return require('packer').startup(function(use)
   use('numToStr/Comment.nvim')
   use("supermaven-inc/supermaven-nvim")
   use("nvim-lualine/lualine.nvim")
-  use("MunifTanjim/nui.nvim")
   use("folke/noice.nvim")
   use("antosha417/nvim-lsp-file-operations")
   use("andreasvc/vim-256noir")
@@ -63,26 +61,18 @@ return require('packer').startup(function(use)
     'JavaHello/spring-boot.nvim',
     commit = '218c0c26c14d99feca778e4d13f5ec3e8b1b60f0',
   }
-  use ('MunifTanjim/nui.nvim')
+  use('MunifTanjim/nui.nvim')
 
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v3.x',
-    requires = {
-      -- LSP Support
-      { 'neovim/nvim-lspconfig' },
-      { 'williamboman/mason.nvim' },
-      { 'williamboman/mason-lspconfig.nvim' },
-
-      -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-path' },
-      { 'hrsh7th/cmp-nvim-lua' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'L3MON4D3/LuaSnip' },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { 'rafamadriz/friendly-snippets' },
-    }
-  }
+  -- LSP Support
+  use('neovim/nvim-lspconfig')
+  use('williamboman/mason.nvim')
+  use('williamboman/mason-lspconfig.nvim')
+  use('hrsh7th/nvim-cmp')
+  use('hrsh7th/cmp-buffer')
+  use('hrsh7th/cmp-path')
+  use('hrsh7th/cmp-nvim-lua')
+  use('hrsh7th/cmp-nvim-lsp')
+  use('L3MON4D3/LuaSnip')
+  use('saadparwaiz1/cmp_luasnip')
+  use('rafamadriz/friendly-snippets')
 end)

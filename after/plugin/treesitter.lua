@@ -1,21 +1,28 @@
-require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "javascript", "typescript", "c_sharp"},
+require('nvim-treesitter').setup({
+  install_dir = vim.fn.stdpath('data') .. '/site',
+})
 
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+local parsers_to_install = { "javascript", "typescript", "c_sharp", "c", "cpp", "rust" }
 
-  -- Automatically install missing parsers when entering buffer
-  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-  auto_install = true,
+local installed = require('nvim-treesitter.config').get_installed()
+local missing = vim.tbl_filter(function(lang)
+  return not vim.list_contains(installed, lang)
+end, parsers_to_install)
 
-  highlight = {
-    enable = true,
+if #missing > 0 then
+  vim.schedule(function()
+    require('nvim-treesitter').install(missing)
+  end)
+end
 
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
+vim.api.nvim_create_autocmd('BufRead', {
+  callback = function()
+    local lang = vim.bo.filetype
+    local parsers = require('nvim-treesitter.parsers')
+    if lang and parsers[lang] and not vim.list_contains(
+      require('nvim-treesitter.config').get_installed(), lang
+    ) then
+      require('nvim-treesitter').install({ lang })
+    end
+  end,
+})

@@ -1,3 +1,3 @@
 require("mason-nvim-dap").setup({
-    ensure_installed = { "delve" }
+    ensure_installed = { "delve", "codelldb", "cpptools" }
 })
