@@ -24,21 +24,21 @@ Note: The formatters (clang-format, rustfmt) need to be installed on your system
 - Rust: rustup component add rustfmt
 
 Go formatters:
--- run: go install mvdan.cc/gofumpt@latest
--- run: go install github.com/incu6us/goimports-reviser/v3@latest
--- run: go install github.com/segmentio/golines@latest
+- run: go install mvdan.cc/gofumpt@latest
+- run: go install github.com/incu6us/goimports-reviser/v3@latest
+- run: go install github.com/segmentio/golines@latest
 
 
 <strong>1. install nvim ```brew install nvim``` (obs: remember to ALWAYS update your nvim to the latest version, like: brew update && brew upgrade nvim)</strong>
 <hr/>
 
 <details>
-<summary><strong>2. Install ripgrep</strong></summary>
+<summary><strong>2. Install ripgrep and tree-sitter-cli</strong></summary>
 
 <hr/>
 
 #### MacOS:
-`brew install ripgrep`
+`brew install ripgrep tree-sitter tree-sitter-cli`
 <hr/>
 
 _For windows, you can use scoop: https://scoop.sh/ or winget: https://github.com/microsoft/winget-cli)._
@@ -154,7 +154,7 @@ Try to search for all "fernandofrali" and replace it with your user name.
 </details>
 <hr/>
 
-<strong>10. finally, run ```:PackerSync``` (and `:Mason` if you haven't already)</strong>
+<strong>10. finally, enter on `lua/fernandofrali/packer.lua` and run `:so`, so run ```:PackerSync``` (and `:Mason` if you haven't already)</strong>
 
 ## Additional info:
 
