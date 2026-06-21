@@ -12,6 +12,7 @@ function WorldIsNotGreyAnymore(color)
   -- )
 
   vim.cmd("colorscheme monoglow")
+  vim.api.nvim_set_hl(0, "typescriptAssign", { fg = "#1bfd9c", bold = true })
 
 
   -- vim.cmd.colorscheme(color or "zenwritten")
