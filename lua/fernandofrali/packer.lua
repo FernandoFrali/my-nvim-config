@@ -62,6 +62,7 @@ return require('packer').startup(function(use)
     commit = '218c0c26c14d99feca778e4d13f5ec3e8b1b60f0',
   }
   use('MunifTanjim/nui.nvim')
+  use("wnkz/monoglow.nvim")
 
   -- LSP Support
   use('neovim/nvim-lspconfig')
