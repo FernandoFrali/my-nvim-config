@@ -74,6 +74,13 @@ M.show_keybinds = function()
     "   X            reverte alterações",
     "   =            mostra diff do commit",
     "",
+    "   ── Debugar (nvim-dap) ───────────────────────────────────────────────",
+    "   F2            entra na função do cursor (step into)",
+    "   F3            pula a função do cursor (step over)",
+    "   F4            sai da função atual (step out)",
+    "   F5            adiciona variável à watch list (acompanha em tempo real)",
+    "   <leader>?     avalia / inspeciona o valor de uma variável",
+    "",
     "   ── Dicas Importantes ────────────────────────────────────────────────",
     "   Ctrl+Z / fg   suspende o nvim / traz de volta",
     "   Ctrl+A / X    incrementa / decrementa número",
@@ -101,24 +108,25 @@ M.show_keybinds = function()
   hl(2, "Title", 0, -1)
   hl(3, "FloatBorder", 0, -1)
 
-  local section_lines = { 5, 10, 15, 20, 27, 34, 39, 43, 48, 52, 56, 60, 67 }
+  local section_lines = { 5, 18, 23, 30, 39, 44, 51, 61, 65, 72, 79, 85 }
   for _, ln in ipairs(section_lines) do
     hl(ln, "Keyword", 0, -1)
   end
 
   local key_lines = {
-    6, 7, 8, 9, 10, 11, 12, 13, 14,
-    16, 17, 18,
-    21, 22, 23, 24, 25,
-    29, 30, 31, 32, 33, 34,
-    36, 37, 38,
-    41, 42, 43, 44,
-    46, 47, 48, 49, 50,
-    53, 54, 55, 56,
-    58, 59, 60,
-    62, 63, 64, 65,
-    68, 69,
-    71
+    6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+    19, 20, 21,
+    24, 25, 26, 27, 28,
+    31, 32, 33, 34, 35, 36, 37,
+    40, 41, 42,
+    45, 46, 47, 48, 49,
+    52, 53, 54, 55, 56, 57, 58, 59,
+    62, 63,
+    66, 67, 68, 69, 70,
+    73, 74, 75, 76, 77,
+    80, 81, 82, 83,
+    86, 87,
+    89,
   }
   for _, ln in ipairs(key_lines) do
     hl(ln, "DiagnosticInfo", 3, 17)
