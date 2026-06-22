@@ -138,19 +138,15 @@ obs²: `CTRL + B` is the default PREFIX in tmux. Check if you haven't changed th
 
 <details>
 <summary><strong>9. TypeScript/JavaScript debugger:</strong></summary>
-install vscode-js-debug (only if you use typescript/javascript):
 
+- install vscode-js-debug (just run :Mason)
+- now add `debug` script to your package.json and run `npm run debug`. This is the debug script:
 
 ```
-git clone https://github.com/microsoft/vscode-js-debug ~/.local/share/nvim/site/vscode-js-debug
-cd ~/.local/share/nvim/site/vscode-js-debug
-sudo npm install --legacy-peer-deps
-npx gulp vsDebugServerBundle
-mv dist out
+node --import tsx --inspect src/server.ts
 ```
 
-obs: you need to change on  `~/.config/nvim/after/plugin/nvim-dap.lua` the `debugger_path` to your user location (e.g Users/fernandofrali to Users/your_user).
-Try to search for all "fernandofrali" and replace it with your user name.
+You can change the `src/server.ts` to your own file.
 </details>
 <hr/>
 

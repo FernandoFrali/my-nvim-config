@@ -1,5 +1,4 @@
 local dap = require('dap')
-local dapui = require('dapui')
 
 dap.adapters.go = {
   type = "server",
@@ -22,22 +21,11 @@ dap.configurations.go = {
   },
 }
 
-dap.adapters['pwa-node'] = {
-  type = "server",
-  host = "127.0.0.1",
-  port = 8123,
-  executable = {
-    command = "js-debug-adapter",
-  }
-}
-
-
-
 dap.adapters.codelldb = {
   type = 'server',
   port = "${port}",
   executable = {
-    command = "/Users/fernandofrali/.local/share/nvim/mason/bin/codelldb",
+    command = vim.fn.stdpath("data") .. "/mason/bin/codelldb",
     args = { "--port", "${port}" }
   },
 }
@@ -58,10 +46,16 @@ dap.configurations.cpp = {
 dap.configurations.c = dap.configurations.cpp
 dap.configurations.rust = dap.configurations.cpp
 
-require('dap-vscode-js').setup({
-  adapters = { 'pwa-node', 'node-terminal', 'chrome', 'pwa-chrome', 'pwa-msedge', 'pwa-extensionHost', 'node' },
-  debugger_path = "/Users/fernandofrali/.local/share/nvim/site/vscode-js-debug"
-})
+dap.adapters["pwa-node"] = {
+  type = "server",
+  host = "127.0.0.1",
+  port = "${port}",
+  executable = {
+    command = vim.fn.stdpath("data") .. "/mason/packages/js-debug-adapter/js-debug-adapter",
+
+    args = { "${port}" },
+  },
+}
 
 for _, language in ipairs { "typescript", "javascript", "javascriptreact", "typescriptreact" } do
   dap.configurations[language] = {
@@ -76,28 +70,23 @@ for _, language in ipairs { "typescript", "javascript", "javascriptreact", "type
     {
       type = "pwa-node",
       request = "attach",
-      name = "Attach to Process",
-      processId = require 'dap.utils'.pick_process,
-      cwd = "${workspaceFolder}",
-    },
-    {
-      type = "bun",
-      request = "launch",
-      name = "Debug Bun",
-      program = "${workspaceFolder}/src/v3/app.ts",
-      cwd = "${workspaceFolder}",
-      watch = true,
-      runtimeExecutable = "bun",
-    },
-    {
-      name = "Attach to Next.js",
-      type = "pwa-node",
-      request = "attach",
-      port = 9229,
-      restart = true,
+      name = "Attach to process ID",
+      processId = require('dap.utils').pick_process,
       cwd = "${workspaceFolder}",
       sourceMaps = true,
-      protocol = "inspector",
-    }
+    },
+    {
+      type = "pwa-node",
+      request = "attach",
+      name = "Attach to Node (9229)",
+      port = 9229,
+      host = "127.0.0.1",
+      cwd = "${workspaceFolder}",
+      sourceMaps = true,
+      resolveSourceMapLocations = {
+        "${workspaceFolder}/**",
+        "!**/node_modules/**",
+      },
+    },
   }
 end
