@@ -1,16 +1,5 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- grn        -> renames all references of the symbol under the cursor
--- gra        -> list code actions available in the line under the cursor
--- grr        -> lists all the references of the symbol under the cursor
--- gri        -> lists all the implementations for the symbol under the cursor
--- grt        -> jump to the definition of the type symbol under the cursor
--- gO         -> lists all symbols in the current buffer
--- ctrl-s     -> in insert mode, display function signature under the cursor
--- [d         -> jump to previous diagnostic in the current buffer
--- ]d         -> jump to next diagnostic in the current buffer
--- ctrl-w + d -> show error/warning message in the line under the cursor
-
 require("lsp-file-operations").setup()
 require('mason').setup({})
 
@@ -39,6 +28,14 @@ require('mason-lspconfig').setup({
       })
     end,
   }
+})
+
+vim.lsp.config('ts_ls', {
+  capabilities = capabilities,
+  on_attach = function(client)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end,
 })
 
 local cmp = require('cmp')
