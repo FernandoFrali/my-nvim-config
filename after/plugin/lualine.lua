@@ -1,4 +1,4 @@
-local glow = "#1bfd9c" 
+local glow = "#1e90ff" 
 local bg   = "#121212"
 local fg   = "#cccccc"
 local blk  = "#080808"
