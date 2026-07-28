@@ -63,6 +63,8 @@ return require('packer').startup(function(use)
   }
   use('MunifTanjim/nui.nvim')
   use("wnkz/monoglow.nvim")
+  use("nvim-mini/mini.nvim")
+  use("MeanderingProgrammer/render-markdown.nvim")
 
   -- LSP Support
   use('neovim/nvim-lspconfig')

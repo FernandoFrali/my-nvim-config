@@ -5,6 +5,8 @@ vim.g.mapleader = " "
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+vim.api.nvim_set_keymap("n", "<leader>m", "<CMD>RenderMarkdown toggle<CR>", { desc = "Toggles `RenderMarkdown` previews globally." });
+
 -- Debugger
 vim.keymap.set("n", "<leader>db", function()
   require("dap").toggle_breakpoint()

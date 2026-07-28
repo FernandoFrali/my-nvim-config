@@ -2,9 +2,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("lsp-file-operations").setup()
 require('mason').setup({})
+require('java').setup();
 
 require('mason-lspconfig').setup({
-  ensure_installed = { 'ts_ls', 'rust_analyzer', 'pyright', 'bashls', 'vimls', 'jsonls', 'yamlls', 'html', 'cssls', 'dockerls', 'terraformls', 'tailwindcss', 'efm', 'clangd', 'angularls', 'prismals', 'astro', 'gopls', 'biome', 'lua_ls' },
+  ensure_installed = { 'ts_ls', 'rust_analyzer', 'pyright', 'bashls', 'vimls', 'jsonls', 'yamlls', 'html', 'cssls', 'dockerls', 'terraformls', 'tailwindcss', 'efm', 'clangd', 'angularls', 'prismals', 'astro', 'gopls', 'biome', 'lua_ls', 'jdtls' },
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({
