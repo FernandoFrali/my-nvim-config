@@ -5,6 +5,9 @@ vim.g.mapleader = " "
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
 vim.api.nvim_set_keymap("n", "<leader>m", "<CMD>RenderMarkdown toggle<CR>", { desc = "Toggles `RenderMarkdown` previews globally." });
 
 -- Debugger
