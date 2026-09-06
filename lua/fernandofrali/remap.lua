@@ -1,4 +1,5 @@
 vim.api.nvim_create_user_command("KeybindsGuide", require("fernandofrali.help").show_keybinds, {})
+vim.api.nvim_create_user_command("RegexGuide", require("fernandofrali.regex").show_regex, {})
 
 vim.g.mapleader = " "
 
