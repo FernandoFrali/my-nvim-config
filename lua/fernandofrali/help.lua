@@ -91,6 +91,12 @@ M.show_keybinds = function()
     "   1. viw → * → N → cgn   substitui ocorrência por ocorrência",
     "   2. . (ponto)            continua substituindo",
     "",
+    "   ── Multi-arquivos (Shell) ───────────────────────────────────────────",
+    "   grep -rl 'old' .              lista arquivos com a ocorrência",
+    "   find . -exec sed -i 's/old/new/g' {} +   substitui em todos (recursivo)",
+    "   sed -i.bak 's/old/new/g' file cria backup .bak antes de substituir",
+    "   :!comando                     roda comando do shell direto do nvim",
+    "",
     "   q  ou  Esc  fecha esta janela",
     "",
   }
@@ -108,7 +114,7 @@ M.show_keybinds = function()
   hl(2, "Title", 0, -1)
   hl(3, "FloatBorder", 0, -1)
 
-  local section_lines = { 5, 18, 23, 30, 39, 44, 51, 61, 65, 72, 79, 85 }
+  local section_lines = { 5, 18, 23, 30, 39, 44, 51, 61, 65, 72, 79, 85, 89 }
   for _, ln in ipairs(section_lines) do
     hl(ln, "Keyword", 0, -1)
   end
@@ -126,7 +132,8 @@ M.show_keybinds = function()
     73, 74, 75, 76, 77,
     80, 81, 82, 83,
     86, 87,
-    89,
+    90, 91, 92, 93,
+    95,
   }
   for _, ln in ipairs(key_lines) do
     hl(ln, "DiagnosticInfo", 3, 17)
