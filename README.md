@@ -110,6 +110,8 @@ set -g prefix C-\\
 unbind C-b
 setw -g mode-keys vi
 
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+
 set -g @rose_pine_variant 'main'
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'christoomey/vim-tmux-navigator'
