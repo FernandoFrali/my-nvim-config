@@ -94,6 +94,7 @@ M.show_keybinds = function()
     "   ── Multi-arquivos (Shell) ───────────────────────────────────────────",
     "   grep -rl 'old' .              lista arquivos com a ocorrência",
     "   find . -exec sed -i 's/old/new/g' {} +   substitui em todos (recursivo)",
+    "   find . -mindepth 1 -maxdepth 1 ! -name old -exec mv -t old -- {} +   move todos os arquivos para a pasta old (menos a pasta old)",
     "   sed -i.bak 's/old/new/g' file cria backup .bak antes de substituir",
     "   :!comando                     roda comando do shell direto do nvim",
     "",

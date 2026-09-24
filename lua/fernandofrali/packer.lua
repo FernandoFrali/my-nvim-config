@@ -65,6 +65,7 @@ return require('packer').startup(function(use)
   use("wnkz/monoglow.nvim")
   use("nvim-mini/mini.nvim")
   use("MeanderingProgrammer/render-markdown.nvim")
+  use("dmmulroy/ts-error-translator.nvim")
 
   -- LSP Support
   use('neovim/nvim-lspconfig')

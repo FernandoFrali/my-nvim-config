@@ -159,30 +159,3 @@ You can change the `src/server.ts` to your own file.
 #### Doc for config the debugger to Rust:
 
 https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb)
-
-#### How to run Java + Spring Boot:
-
-Install SDKMAN:
-```
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-```
-
-Install Java with SDKMAN
-```
-sdk list java #to see supported versions
-sdk install java 21.0.5-tem #or any other version that you want
-```
-
-_OBS: If you ever need to switch versions later: sdk use java 21.0.5-tem (session-only) or sdk default java 21.0.5-tem (persistent)._
-
-
-Generate the project
-```zsh
-spring init -dweb,data-jpa,h2 --build=maven --java-version=21 projectname # you can use spring init --list to show all dependency ids (like 'web, data-jpa, h2 etc')
-```
-
-Run the project
-```zsh
-./mvnw spring-boot:run
-```
